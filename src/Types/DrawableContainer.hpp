@@ -36,6 +36,14 @@ public:
 		items.clear();
 	}
 
+	unsigned int getSize(){
+		return items.size();
+	}
+
+	Drawable* get(int pos){
+		return items[pos];
+	}
+
 	virtual Drawable * clone() {
 		DrawableContainer * ret = new DrawableContainer;
 		BOOST_FOREACH(Drawable * item, items) {
